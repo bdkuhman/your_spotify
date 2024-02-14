@@ -27,7 +27,7 @@ WORKDIR /app
 ARG NODE_ENV
 ENV NODE_ENV ${NODE_ENV:-production}
 
-RUN apk add python3 gcc g++ make cmake
+RUN apt install python3 gcc g++ make cmake
 
 COPY --from=builder /app/scripts/ /app/scripts/
 COPY --from=builder /app/package.json /app/package.json
