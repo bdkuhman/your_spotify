@@ -2,6 +2,7 @@
 name: Nightly build CI
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - .github/workflows/nightly.yml
