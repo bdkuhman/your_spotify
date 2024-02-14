@@ -44,8 +44,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            your_spotify_server:nightly
-            your_spotify_server:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/your_spotify_server:nightly
+            ghcr.io/${{ github.repository_owner }}/your_spotify_server:${{ github.sha }}
 
   build-client:
     runs-on: ubuntu-latest
@@ -80,5 +80,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            your_spotify_client:nightly
-            your_spotify_client:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/your_spotify_client:nightly
+            ghcr.io/${{ github.repository_owner }}/your_spotify_client:${{ github.sha }}
